@@ -1,4 +1,4 @@
-package com.iwsaitw.easyparking;
+package com.iwsaitw.easyparking.application;
 
 import org.springframework.stereotype.Service;
 
