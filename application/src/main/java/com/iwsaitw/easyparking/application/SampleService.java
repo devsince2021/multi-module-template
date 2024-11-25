@@ -1,5 +1,6 @@
 package com.iwsaitw.easyparking.application;
 
+import com.iwsaitw.easyparking.domain.SampleDomain;
 import org.springframework.stereotype.Service;
 
 @Service
