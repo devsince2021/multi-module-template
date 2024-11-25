@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 public class SampleService {
 
     public String test() {
+        SampleDomain instance = new SampleDomain();
+
         return "work";
     }
 }
