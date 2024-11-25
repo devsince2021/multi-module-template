@@ -1,4 +1,6 @@
 rootProject.name = 'easy_parking_server'
 
 include ('springboot')
-
+include ('api')
+include ('application')
+include ('domain')
