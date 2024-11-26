@@ -13,7 +13,12 @@ if (project == rootProject) {
 
 allprojects {
     version = "${appVersion}"
-    sourceCompatibility = "${javaVersion}"
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of("${javaVersion}")  // 또는 원하는 자바 버전
+        }
+    }
 
     repositories {
         mavenCentral()
