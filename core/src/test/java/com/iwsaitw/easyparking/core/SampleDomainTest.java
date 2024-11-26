@@ -1,4 +1,4 @@
-package com.iwsaitw.easyparking.domain;
+package com.iwsaitw.easyparking.core;
 
 import org.junit.jupiter.api.Test;
 
