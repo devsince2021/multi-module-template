@@ -37,6 +37,16 @@ subprojects {
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
     }
 
+
+    // yml 파일 폴더로 구분해서 사용하기 위한 코드
+    sourceSets {
+        main {
+            resources {
+                srcDirs = ["src/main/resources/local"]
+            }
+        }
+    }
+
     // 진입점 고정 >> 우측에서 bootRun으로 실행가능
     tasks.matching { it.name == 'bootRun' }.configureEach {
         enabled = project.name == "${entryModule}"
