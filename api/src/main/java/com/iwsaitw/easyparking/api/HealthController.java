@@ -1,7 +1,7 @@
 package com.iwsaitw.easyparking.api;
 
 import com.iwsaitw.easyparking.application.SampleService;
-import com.iwsaitw.easyparking.utils.exception.BaseException;
+import com.iwsaitw.utils.exception.BaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

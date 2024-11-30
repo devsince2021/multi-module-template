@@ -1,4 +1,4 @@
-package com.iwsaitw.easyparking.utils.exception;
+package com.iwsaitw.utils.exception;
 
 // TODO: BaseExceptionCode 구현할 것
 public class BaseException extends RuntimeException {

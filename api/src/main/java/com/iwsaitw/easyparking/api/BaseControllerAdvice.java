@@ -1,6 +1,6 @@
 package com.iwsaitw.easyparking.api;
 
-import com.iwsaitw.easyparking.utils.exception.BaseException;
+import com.iwsaitw.utils.exception.BaseException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
