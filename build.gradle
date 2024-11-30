@@ -45,6 +45,11 @@ subprojects {
                 srcDirs = ["src/main/resources", "src/main/resources/local"]
             }
         }
+        test {
+            resources {
+                srcDirs = ["src/test/resources"]
+            }
+        }
     }
 
     // 진입점 고정 >> 우측에서 bootRun으로 실행가능

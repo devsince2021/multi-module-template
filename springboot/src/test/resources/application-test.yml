@@ -1,0 +1,9 @@
+server:
+  port: 9000
+
+spring:
+  config:
+    activate:
+      on-profile: test
+    import:
+      - classpath:database-test.yml
