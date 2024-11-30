@@ -1,6 +1,6 @@
-package com.iwsaitw.easyparking.api;
+package com.iwsaitw.web;
 
-import com.iwsaitw.easyparking.utils.exception.BaseException;
+import com.iwsaitw.utils.exception.BaseException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -12,6 +12,7 @@ public class BaseControllerAdvice {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(BaseException.class)
     public String handleBaseException() {
+        System.out.println("hi");
         return "exception";
     }
 

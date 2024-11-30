@@ -1,4 +1,4 @@
-package com.iwsaitw.easyparking.utils.exception;
+package com.iwsaitw.utils.exception;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;

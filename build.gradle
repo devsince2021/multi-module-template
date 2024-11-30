@@ -42,12 +42,9 @@ subprojects {
     sourceSets {
         main {
             resources {
-                srcDirs = ["src/main/resources", "src/main/resources/local"]
-            }
-        }
-        test {
-            resources {
-                srcDirs = ["src/test/resources"]
+                if (project.name == "${entryModule}") {
+                    srcDir "src/main/resources/local"
+                }
             }
         }
     }
