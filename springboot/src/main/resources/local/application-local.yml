@@ -5,5 +5,5 @@ spring:
   config:
     activate:
       on-profile: local
-  import:
-    - classpath:local/database-local.yml
+    import:
+      - classpath:local/database-local.yml
