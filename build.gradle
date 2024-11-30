@@ -42,7 +42,12 @@ subprojects {
     sourceSets {
         main {
             resources {
-                srcDirs = ["src/main/resources/local"]
+                srcDirs = ["src/main/resources", "src/main/resources/local"]
+            }
+        }
+        test {
+            resources {
+                srcDirs = ["src/test/resources"]
             }
         }
     }

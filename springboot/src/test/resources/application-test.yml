@@ -4,6 +4,6 @@ server:
 spring:
   config:
     activate:
-      on-profile: local
+      on-profile: test
     import:
-      - classpath:local/database-local.yml
+      - classpath:database-test.yml
