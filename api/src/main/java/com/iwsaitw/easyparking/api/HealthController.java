@@ -1,7 +1,6 @@
 package com.iwsaitw.easyparking.api;
 
 import com.iwsaitw.easyparking.application.SampleService;
-import com.iwsaitw.utils.exception.BaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,7 +22,7 @@ public class HealthController {
 
     @GetMapping("/exception")
     public void checkException() {
-        throw new BaseException("test", "it is test");
+        sampleService.throwBaseException();
     }
 
     @PostMapping("/sample")
