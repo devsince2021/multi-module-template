@@ -1,0 +1,4 @@
+springdoc:
+  swagger-ui:
+    url: /docs/openapi.json
+    path: /swagger-ui.html

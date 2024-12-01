@@ -5,3 +5,6 @@
 
 # Ignore Gradle build output directory
 build
+
+# 진입점의 docs 경로
+springboot/src/main/resources/static/docs/
