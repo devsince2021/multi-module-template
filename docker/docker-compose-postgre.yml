@@ -1,22 +1,22 @@
 services:
   database:
     image: postgres:15
-    container_name: easyparking_local_rdb
+    container_name: single_template_local_rdb
     environment:
-      POSTGRES_DB: easyparking_local
+      POSTGRES_DB: single_template_local
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
     ports:
       - "55432:5432"
     volumes:
-      - easyparking-data:/var/lib/postgresql/data
+      - single_template-data:/var/lib/postgresql/data
     networks:
-      - easyparking-network
+      - single_template-network
 
 volumes:
-  easyparking-data:
-    name: easyparking-data
+  single_template-data:
+    name: single_template-data
 
 networks:
-  easyparking-network:
-    name: easyparking-network
+  single_template-network:
+    name: single_template-network
