@@ -20,8 +20,9 @@ public class SampleService {
         throw new BaseException("test", "it is test");
     }
 
-    public void createSample() {
-        SampleDomain domain = new SampleDomain("work");
+    public SampleDomain createSample(String name) {
+        SampleDomain domain = new SampleDomain(name);
         SampleDomain savedDomain = sampleRepository.save(domain);
+        return savedDomain;
     }
 }
