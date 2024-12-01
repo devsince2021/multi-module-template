@@ -9,3 +9,16 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter'
 }
+
+tasks.register('collectSnippets', Copy) {
+    layout.buildDirectory.get().asFile.mkdirs()
+
+    dependsOn(project(':api').tasks.named('test'))
+
+    // 각 모듈의 스니펫 디렉토리 지정
+    from(project(':api').layout.buildDirectory.dir('generated-snippets')) {
+        into('api')
+    }
+
+    into(layout.buildDirectory.dir('generated-snippets'))
+}

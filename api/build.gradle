@@ -6,4 +6,6 @@ plugins {
 dependencies {
     implementation(project(":application"))
     implementation(project(":utils:base-web"))
+
+    testImplementation "org.springframework.restdocs:spring-restdocs-mockmvc"
 }
