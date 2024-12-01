@@ -1,4 +1,4 @@
-rootProject.name = 'easy_parking_server'
+rootProject.name = 'iwsaitw_single_domain_template'
 
 include ('springboot')
 include ('api')
