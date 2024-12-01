@@ -65,6 +65,7 @@
 # 참고사항
 
 ## 1. Architecture
+![arch](https://github.com/user-attachments/assets/b1e9cc3e-2f08-408e-91a9-c4d6aed644c5)
 
 
 <br />
