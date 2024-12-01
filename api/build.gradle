@@ -8,4 +8,5 @@ dependencies {
     implementation(project(":utils:base-web"))
 
     testImplementation "org.springframework.restdocs:spring-restdocs-mockmvc"
+    testImplementation "com.epages:restdocs-api-spec-mockmvc:${restDocsApiSpecVersion}"
 }

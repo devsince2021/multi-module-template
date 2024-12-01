@@ -1,6 +1,7 @@
 plugins {
     id 'org.springframework.boot'
     id 'io.spring.dependency-management'
+    id 'com.epages.restdocs-api-spec' version "${restDocsApiSpecVersion}"
 }
 
 dependencies {
@@ -8,6 +9,14 @@ dependencies {
     implementation(project(":persistence"))
 
     implementation 'org.springframework.boot:spring-boot-starter'
+}
+
+openapi3 {
+    server = 'http://localhost:9000'
+    title = "API Documentation"
+    description = "API Documentation"
+    version = "1.0.0"
+    format = 'json'
 }
 
 tasks.register('collectSnippets', Copy) {
@@ -21,4 +30,9 @@ tasks.register('collectSnippets', Copy) {
     }
 
     into(layout.buildDirectory.dir('generated-snippets'))
+}
+
+tasks.register('OAS3') {
+    dependsOn('collectSnippets')
+    finalizedBy('openapi3')
 }
