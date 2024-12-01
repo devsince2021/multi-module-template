@@ -6,6 +6,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
-@EnableJpaRepositories(basePackages = {"com.iwsaitw.easyparking"})
-@EntityScan(basePackages = {"com.iwsaitw.easyparking"})
+@EnableJpaRepositories(basePackages = {"com.iwsaitw.template"})
+@EntityScan(basePackages = {"com.iwsaitw.template"})
 public class PostgresqlConfig { }
