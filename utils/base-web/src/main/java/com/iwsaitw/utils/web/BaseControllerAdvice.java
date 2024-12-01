@@ -1,4 +1,4 @@
-package com.iwsaitw.web;
+package com.iwsaitw.utils.web;
 
 import com.iwsaitw.utils.exception.BaseException;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.iwsaitw.web.config;
+package com.iwsaitw.utils.web.config;
 
 
 import org.springframework.boot.autoconfigure.AutoConfiguration;
