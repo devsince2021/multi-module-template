@@ -7,3 +7,4 @@ spring:
       on-profile: local
     import:
       - classpath:local/database-local.yml
+      - classpath:local/swagger-local.yml

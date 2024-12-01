@@ -5,6 +5,11 @@ public class SampleDomain {
 
     private String name;
 
+    public SampleDomain(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public SampleDomain(String name) {
         this.id = 0L;
         this.name = name;
