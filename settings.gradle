@@ -1,0 +1,9 @@
+rootProject.name = 'easy_parking_server'
+
+include ('springboot')
+include ('api')
+include ('application')
+include ('persistence')
+include ('core')
+include ('utils', 'utils:exception', 'utils:base-web')
+

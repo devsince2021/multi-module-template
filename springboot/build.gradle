@@ -1,0 +1,55 @@
+plugins {
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+    id 'com.epages.restdocs-api-spec' version "${restDocsApiSpecVersion}"
+}
+
+dependencies {
+    implementation(project(":api"))
+    implementation(project(":persistence"))
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${swaggerUiVersion}"
+}
+
+openapi3 {
+    server = 'http://localhost:9000'
+    title = "API Documentation"
+    description = "API Documentation"
+    version = "1.0.0"
+    format = 'json'
+    outputDirectory = layout.projectDirectory.dir("src/main/resources/static/docs").asFile
+    outputFileNamePrefix = 'openapi'
+}
+
+tasks.register('collectSnippets', Copy) {
+    layout.buildDirectory.get().asFile.mkdirs()
+
+    dependsOn(project(':api').tasks.named('test'))
+
+    // 각 모듈의 스니펫 디렉토리 지정
+    from(project(':api').layout.buildDirectory.dir('generated-snippets')) {
+        into('api')
+    }
+
+    into(layout.buildDirectory.dir('generated-snippets'))
+}
+
+tasks.register('cleanDocs') {
+    doFirst {
+        delete(layout.projectDirectory.dir("src/main/resources/static/docs"))
+        layout.projectDirectory.dir("src/main/resources/static/docs").asFile.mkdirs()
+    }
+}
+
+tasks.register('OAS3') {
+    dependsOn('collectSnippets')
+    dependsOn('cleanDocs')
+
+    finalizedBy('openapi3')
+}
+
+// ./gradlew clean 실행시 docs파일도 같이 삭제
+tasks.named('clean') {
+    dependsOn('cleanDocs')
+}

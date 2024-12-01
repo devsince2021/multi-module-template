@@ -1,0 +1,10 @@
+server:
+  port: 9000
+
+spring:
+  config:
+    activate:
+      on-profile: local
+    import:
+      - classpath:local/database-local.yml
+      - classpath:local/swagger-local.yml

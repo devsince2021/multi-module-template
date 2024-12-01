@@ -1,0 +1,71 @@
+plugins {
+    id 'org.springframework.boot' version "${springBootVersion}" apply false
+    id 'io.spring.dependency-management' version "${dependencyManagementVersion}" apply false
+    id 'java'
+}
+
+if (project == rootProject) {
+    // 루트 프로젝트는 빌드되지 않도록 설정
+    tasks.named('jar') {
+        enabled = false
+    }
+}
+
+allprojects {
+    version = "${appVersion}"
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of("${javaVersion}")  // 또는 원하는 자바 버전
+        }
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    // NOTE: 프로젝트 최초 실행시 ./gradlew initGithooks 를 실행해야함
+    tasks.register('initGithooks', Exec) {
+        commandLine 'git', 'config', 'core.hooksPath', '.githooks'
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    dependencies {
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    }
+
+
+    // yml 파일 폴더로 구분해서 사용하기 위한 코드
+    sourceSets {
+        main {
+            resources {
+                if (project.name == "${entryModule}") {
+                    srcDir "src/main/resources/local"
+                }
+            }
+        }
+    }
+
+    // 진입점 고정 >> 우측에서 bootRun으로 실행가능
+    tasks.matching { it.name == 'bootRun' }.configureEach {
+        enabled = project.name == "${entryModule}"
+    }
+
+    // 진입점은 bootJar로 실행파일 포함된 빌드
+    tasks.matching { it.name == 'bootJar' }.configureEach {
+        enabled = project.name == "${entryModule}"
+    }
+
+    // 진입점 제외하고는 빌드에 실행파일 포함하지 않도록 설정
+    tasks.matching { it.name == 'jar' }.configureEach {
+        enabled = project.name != "${entryModule}"
+    }
+
+    tasks.named('test') {
+        useJUnitPlatform() // JUnit 5 사용
+    }
+}
