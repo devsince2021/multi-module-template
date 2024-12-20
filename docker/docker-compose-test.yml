@@ -1,0 +1,22 @@
+services:
+  database:
+    image: postgres:15
+    container_name: single_template_test_rdb
+    environment:
+      POSTGRES_DB: single_template_test
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "55433:5432"
+    volumes:
+      - single_template-test-data:/var/lib/postgresql/data
+    networks:
+      - single_template-test-network
+
+volumes:
+  single_template-test-data:
+    name: single_template-test-data
+
+networks:
+  single_template-test-network:
+    name: single_template-test-network

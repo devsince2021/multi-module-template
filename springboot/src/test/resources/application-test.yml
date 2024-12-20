@@ -6,4 +6,4 @@ spring:
     activate:
       on-profile: test
     import:
-      - classpath:database-test.yml
+#      - classpath:database-test.yml
