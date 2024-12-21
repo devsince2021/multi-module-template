@@ -32,4 +32,10 @@ public abstract class BasePersistenceTest {
         registry.add("spring.jpa.show-sql", () -> "true");
         registry.add("spring.jpa.properties.hibernate.format_sql", () -> "true");
     }
+
+    protected static void addSqlScript(DynamicPropertyRegistry registry, String scriptPath) {
+        registry.add("spring.sql.init.mode", () -> "always");
+        registry.add("spring.jpa.defer-datasource-initialization", () -> "true");
+        registry.add("spring.sql.init.data-locations", () -> "classpath:" + scriptPath);
+    }
 }
