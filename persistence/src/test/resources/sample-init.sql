@@ -1,1 +1,1 @@
-INSERT INTO sample (name) VALUES ('WOW');
+INSERT INTO sample (name, created_at, updated_at) VALUES ('WOW', NOW(), NOW());
