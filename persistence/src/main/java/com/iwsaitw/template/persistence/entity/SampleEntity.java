@@ -1,13 +1,13 @@
 package com.iwsaitw.template.persistence.entity;
 
-import com.iwsaitw.template.persistence.base.BaseEntity;
+import com.iwsaitw.template.persistence.base.EditableEntity;
 import jakarta.persistence.*;
 
 import java.util.Objects;
 
 @Entity
 @Table(name = "sample")
-public class SampleEntity extends BaseEntity {
+public class SampleEntity extends EditableEntity {
 
     @Column(name = "name", nullable = false)
     private String name;
@@ -43,5 +43,13 @@ public class SampleEntity extends BaseEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void deleteSample() {
+        super.delete();
+    }
+
+    public boolean isDeleted() {
+        return super.isDeleted();
     }
 }

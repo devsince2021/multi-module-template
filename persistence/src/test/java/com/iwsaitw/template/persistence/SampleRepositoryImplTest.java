@@ -39,11 +39,20 @@ public class SampleRepositoryImplTest extends BasePersistenceTest {
 
         assertNotNull(entity.getId());
         assertEquals("Hello", entity.getName());
+
         assertNotNull(getCreatedAt(entity));
+        assertEquals(getCreatedAt(entity), getUpdatedAt(entity));
+    }
+
+    private LocalDateTime getUpdatedAt(SampleEntity entity) throws NoSuchFieldException, IllegalAccessException {
+        Field createdAtField = SampleEntity.class.getSuperclass().getDeclaredField("updatedAt");
+        createdAtField.setAccessible(true);
+
+        return (LocalDateTime) createdAtField.get(entity);
     }
 
     private LocalDateTime getCreatedAt(SampleEntity entity) throws NoSuchFieldException, IllegalAccessException {
-        Field createdAtField = SampleEntity.class.getSuperclass().getDeclaredField("createdAt");
+        Field createdAtField = SampleEntity.class.getSuperclass().getSuperclass().getDeclaredField("createdAt");
         createdAtField.setAccessible(true);
 
         return (LocalDateTime) createdAtField.get(entity);
