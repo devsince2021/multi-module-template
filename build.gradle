@@ -2,7 +2,6 @@ plugins {
     id 'org.springframework.boot' version "${springBootVersion}" apply false
     id 'io.spring.dependency-management' version "${dependencyManagementVersion}" apply false
     id 'java'
-    id 'java-test-fixtures'
 }
 
 if (project == rootProject) {
@@ -24,16 +23,10 @@ allprojects {
     repositories {
         mavenCentral()
     }
-
-    // NOTE: 프로젝트 최초 실행시 ./gradlew initGithooks 를 실행해야함
-    tasks.register('initGithooks', Exec) {
-        commandLine 'git', 'config', 'core.hooksPath', '.githooks'
-    }
 }
 
 subprojects {
     apply plugin: 'java'
-    apply plugin: 'java-test-fixtures'
 
     dependencies {
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -70,4 +63,9 @@ subprojects {
     tasks.named('test') {
         useJUnitPlatform() // JUnit 5 사용
     }
+}
+
+// NOTE: 프로젝트 최초 실행시 ./gradlew initGithooks 를 실행해야함
+tasks.register('initGithooks', Exec) {
+    commandLine 'git', 'config', 'core.hooksPath', '.githooks'
 }

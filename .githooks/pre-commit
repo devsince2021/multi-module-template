@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo "Running tests before commit..."
+
+# Gradle 테스트 실행
+./gradlew test
+
+# 테스트 결과 확인
+TEST_RESULT=$?
+
+if [ $TEST_RESULT -eq 0 ]; then
+    echo "All tests passed! Proceeding with push..."
+    exit 0
+else
+    echo "Tests failed! Push aborted."
+    exit 1
+fi

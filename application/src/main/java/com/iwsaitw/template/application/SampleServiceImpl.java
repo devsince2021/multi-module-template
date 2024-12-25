@@ -1,12 +1,13 @@
 package com.iwsaitw.template.application;
 
 import com.iwsaitw.template.core.domain.SampleDomain;
+import com.iwsaitw.template.core.domain.SampleService;
 import com.iwsaitw.utils.exception.BaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SampleService {
+public class SampleServiceImpl implements SampleService {
 
     @Autowired
     private SampleRepository sampleRepository;

@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 interface BaseTestJpaRepository extends JpaRepository<BaseTestEntity, Long> {}
 
 @Entity
-@Table(name = "TestEntity")
+@Table(name = "BaseTestEntity")
 class BaseTestEntity extends BaseEntity {
     private String name;
 
