@@ -1,17 +1,18 @@
 package com.iwsaitw.utils.exception;
 
+import com.iwsaitw.utils.exception.code.BaseExceptionCode;
+import com.iwsaitw.utils.exception.fixture.BaseExceptionTestFixtures;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BaseExceptionTest {
 
     @Test
     public void should_create_instance_with_code_and_message() {
-        String code = "hello";
-        String message = "it is msg";
-
-        BaseException ex = new BaseException(code, message);
+        BaseExceptionCode code = BaseExceptionTestFixtures.createFailCode();
+        BaseException ex = new BaseException(code);
 
         assertInstanceOf(BaseException.class, ex);
         assertInstanceOf(RuntimeException.class, ex);
@@ -20,21 +21,18 @@ public class BaseExceptionTest {
 
     @Test
     public void should_return_message() {
-        String code = "hello";
-        String message = "it is msg";
+        BaseExceptionCode code = BaseExceptionTestFixtures.createFailCode();
+        BaseException ex = new BaseException(code);
 
-        BaseException ex = new BaseException(code, message);
-
-        assertEquals(message, ex.getMessage());
+        assertEquals(code.getMessage(), ex.getMessage());
     }
 
     @Test
     public void should_return_code() {
-        String code = "hello";
-        String message = "it is msg";
+        BaseExceptionCode code = BaseExceptionTestFixtures.createFailCode();
+        BaseException ex = new BaseException(code);
 
-        BaseException ex = new BaseException(code, message);
-
-        assertEquals(code, ex.getCode());
+        assertTrue(ex.getCode().contains(code.getPrefix().getCode()));
+        assertTrue(ex.getCode().contains(code.getCode()));
     }
 }

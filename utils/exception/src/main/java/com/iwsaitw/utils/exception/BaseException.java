@@ -1,15 +1,20 @@
 package com.iwsaitw.utils.exception;
 
-// TODO: BaseExceptionCode 구현할 것
-public class BaseException extends RuntimeException {
-    private final String code;
+import com.iwsaitw.utils.exception.code.BaseExceptionCode;
 
-    public BaseException(String code, String message) {
-        super(message);
+public class BaseException extends RuntimeException {
+    private final BaseExceptionCode code;
+
+    public BaseException(BaseExceptionCode code) {
+        super(code.getMessage());
         this.code = code;
     }
 
     public String getCode() {
-        return this.code;
+        return this.code.getPrefix().getCode() + "-" + this.code.getCode();
+    }
+
+    public String getMessage() {
+        return this.code.getMessage();
     }
 }
