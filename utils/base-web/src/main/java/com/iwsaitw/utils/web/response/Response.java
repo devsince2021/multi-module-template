@@ -5,14 +5,14 @@ import com.iwsaitw.utils.exception.BaseException;
 public class Response<T> {
     private final Result result;
     private final T data;
-    private final Error error;
+    private final CustomError error;
 
 
     private Response(Result result, T data, BaseException exception) {
         this.result = result;
         this.data = data;
         this.error = exception != null
-                ? new Error(exception.getCode(), exception.getMessage())
+                ? new CustomError(exception.getCode(), exception.getMessage())
                 : null;
     }
 
@@ -24,7 +24,7 @@ public class Response<T> {
         return data;
     }
 
-    public Error getError() {
+    public CustomError getError() {
         return error;
     }
 
