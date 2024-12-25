@@ -67,13 +67,13 @@ public class HealthControllerTest {
 
         String name = "test-name";
 
-        when(sampleService.createSample(name)).thenReturn(new SampleDomain(0L, name));
+        when(sampleService.createSample(name)).thenReturn(new SampleDomain(1L, name));
 
         mockMvc.perform(post(path)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(req))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value("0"))
+                .andExpect(jsonPath("$.id").value("1"))
                 .andExpect(jsonPath("$.name").value(name))
                 .andDo(createDocs());
     }
