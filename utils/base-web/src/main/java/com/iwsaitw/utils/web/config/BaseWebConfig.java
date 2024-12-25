@@ -5,6 +5,6 @@ import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 @AutoConfiguration
-@ComponentScan(basePackages = {"com.iwsaitw.web"})
+@ComponentScan(basePackages = {"com.iwsaitw.utils.web"})
 public class BaseWebConfig {
 }

@@ -3,6 +3,7 @@ package com.iwsaitw.template.application;
 import com.iwsaitw.template.core.domain.SampleDomain;
 import com.iwsaitw.template.core.domain.SampleService;
 import com.iwsaitw.utils.exception.BaseException;
+import com.iwsaitw.utils.exception.code.GeneralExceptionCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class SampleServiceImpl implements SampleService {
     }
 
     public void throwBaseException() {
-        throw new BaseException("test", "it is test");
+        throw new BaseException(GeneralExceptionCode.II001);
     }
 
     public SampleDomain createSample(String name) {
