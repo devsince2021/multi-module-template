@@ -6,5 +6,6 @@ plugins {
 }
 
 dependencies {
+    implementation(project(":utils:base-domain"))
     api(project(":utils:exception"))
 }
