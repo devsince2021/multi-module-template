@@ -1,10 +1,10 @@
 package com.iwsaitw.utils.web.response;
 
-public class Error {
+public class CustomError {
     private String code;
     private String message;
 
-    public Error(String code, String message) {
+    public CustomError(String code, String message) {
         this.code = code;
         this.message = message;
     }

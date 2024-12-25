@@ -1,19 +1,14 @@
 package com.iwsaitw.utils.web.response;
 
-import com.iwsaitw.utils.exception.BaseException;
-
 public class Response<T> {
     private final Result result;
     private final T data;
-    private final Error error;
+    private final CustomError error;
 
-
-    private Response(Result result, T data, BaseException exception) {
+    private Response(Result result, T data, CustomError error) {
         this.result = result;
         this.data = data;
-        this.error = exception != null
-                ? new Error(exception.getCode(), exception.getMessage())
-                : null;
+        this.error = error;
     }
 
     public Result getResult() {
@@ -24,7 +19,7 @@ public class Response<T> {
         return data;
     }
 
-    public Error getError() {
+    public CustomError getError() {
         return error;
     }
 
@@ -32,7 +27,8 @@ public class Response<T> {
         return new Response<>(Result.SUCCESS, data, null);
     }
 
-    public static Response<BaseException> fail(BaseException exception) {
-        return new Response<>(Result.FAIL, null, exception);
+    public static Response<CustomError> fail(String code, String message) {
+        CustomError error = new CustomError(code, message);
+        return new Response<>(Result.FAIL, null, error);
     }
 }
