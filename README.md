@@ -31,7 +31,14 @@
 
 <br />
 
-4. 스웨거를 위한 OAS 생성
+### 4. githook 설정을 한다.
+```
+    $ ./gradlew initGithooks
+```
+
+<br />
+
+### 필요시 - 스웨거를 위한 OAS 생성
 ```
     $ ./gradlew oas3
 ```
