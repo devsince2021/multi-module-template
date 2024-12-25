@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 interface EditableTestJpaRepository extends JpaRepository<EditableTestEntity, Long> {}
 
 @Entity
-@Table(name = "TestEntity")
+@Table(name = "EditTestEntity")
 class EditableTestEntity extends EditableEntity {
     private String name;
 
