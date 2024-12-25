@@ -1,7 +1,7 @@
 package com.iwsaitw.template.api;
 
-import com.iwsaitw.template.application.SampleService;
 import com.iwsaitw.template.core.domain.SampleDomain;
+import com.iwsaitw.template.core.domain.SampleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
