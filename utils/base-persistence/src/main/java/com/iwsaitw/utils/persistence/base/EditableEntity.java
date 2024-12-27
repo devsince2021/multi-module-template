@@ -1,4 +1,4 @@
-package com.iwsaitw.template.persistence.base;
+package com.iwsaitw.utils.persistence.base;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
