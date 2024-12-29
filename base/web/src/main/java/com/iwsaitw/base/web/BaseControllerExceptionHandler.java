@@ -1,4 +1,4 @@
-package com.iwsaitw.utils.web;
+package com.iwsaitw.base.web;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.MethodArgumentNotValidException;

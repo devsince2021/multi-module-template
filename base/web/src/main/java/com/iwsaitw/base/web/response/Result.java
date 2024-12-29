@@ -1,4 +1,4 @@
-package com.iwsaitw.utils.web.response;
+package com.iwsaitw.base.web.response;
 
 public enum Result {
     SUCCESS,

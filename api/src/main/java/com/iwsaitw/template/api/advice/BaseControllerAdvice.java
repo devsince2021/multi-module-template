@@ -1,10 +1,10 @@
 package com.iwsaitw.template.api.advice;
 
-import com.iwsaitw.utils.web.BaseControllerExceptionHandler;
-import com.iwsaitw.utils.web.response.CustomError;
+import com.iwsaitw.base.web.BaseControllerExceptionHandler;
+import com.iwsaitw.base.web.response.CustomError;
 import com.iwsaitw.base.domain.exception.BaseException;
 import com.iwsaitw.base.domain.exception.code.ArgumentExceptionCode;
-import com.iwsaitw.utils.web.response.Response;
+import com.iwsaitw.base.web.response.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
