@@ -1,4 +1,4 @@
-package com.iwsaitw.template.api.health;
+package com.iwsaitw.template.api.sample;
 
 public class SampleRequest {
     private String name;
