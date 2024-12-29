@@ -8,5 +8,5 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
     implementation(project(":application"))
-    implementation(project(":utils:base-web"))
+    implementation(project(":base:web"))
 }

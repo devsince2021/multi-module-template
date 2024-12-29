@@ -6,5 +6,5 @@ plugins {
 }
 
 dependencies {
-    api (project(":utils:base-domain"))
+    api (project(":base:domain"))
 }
