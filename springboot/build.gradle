@@ -10,29 +10,21 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${swaggerUiVersion}"
+
+    testImplementation "org.springframework.restdocs:spring-restdocs-mockmvc"
+    testImplementation "com.epages:restdocs-api-spec-mockmvc:${restDocsApiSpecVersion}"
 }
 
 openapi3 {
-    server = 'http://localhost:9000'
+    servers = [
+            { url = 'http://localhost:9000' },
+    ]
     title = "API Documentation"
     description = "API Documentation"
     version = "1.0.0"
     format = 'json'
     outputDirectory = layout.projectDirectory.dir("src/main/resources/static/docs").asFile
     outputFileNamePrefix = 'openapi'
-}
-
-tasks.register('collectSnippets', Copy) {
-    layout.buildDirectory.get().asFile.mkdirs()
-
-    dependsOn(project(':api').tasks.named('test'))
-
-    // 각 모듈의 스니펫 디렉토리 지정
-    from(project(':api').layout.buildDirectory.dir('generated-snippets')) {
-        into('api')
-    }
-
-    into(layout.buildDirectory.dir('generated-snippets'))
 }
 
 tasks.register('cleanDocs') {
@@ -43,9 +35,8 @@ tasks.register('cleanDocs') {
 }
 
 tasks.register('OAS3') {
-    dependsOn('collectSnippets')
     dependsOn('cleanDocs')
-
+    // 별도의 test가 없어도 이 명령어로 openapi.json 생성 가능
     finalizedBy('openapi3')
 }
 
