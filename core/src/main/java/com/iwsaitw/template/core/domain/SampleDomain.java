@@ -4,7 +4,6 @@ import java.util.Objects;
 
 public class SampleDomain {
     private SampleDomainId id;
-
     private String name;
 
     public SampleDomain(Long id, String name) {

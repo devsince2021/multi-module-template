@@ -1,11 +1,8 @@
 plugins {
-    id 'java-library'
     id 'org.springframework.boot'
     id 'io.spring.dependency-management'
 }
 
 dependencies {
-    implementation(project(":utils:base-domain"))
-
-    api 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 }
