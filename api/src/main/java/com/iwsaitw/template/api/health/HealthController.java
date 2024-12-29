@@ -1,4 +1,4 @@
-package com.iwsaitw.template.api;
+package com.iwsaitw.template.api.health;
 
 import com.iwsaitw.template.core.domain.SampleDomain;
 import com.iwsaitw.template.core.domain.SampleService;

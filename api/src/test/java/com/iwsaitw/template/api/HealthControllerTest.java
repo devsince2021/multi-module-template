@@ -1,5 +1,6 @@
 package com.iwsaitw.template.api;
 
+import com.iwsaitw.template.api.health.HealthController;
 import com.iwsaitw.template.core.domain.SampleDomain;
 import com.iwsaitw.template.core.domain.SampleService;
 import org.junit.jupiter.api.Test;
