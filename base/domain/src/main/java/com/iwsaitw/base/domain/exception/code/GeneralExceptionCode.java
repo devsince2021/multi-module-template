@@ -1,6 +1,6 @@
-package com.iwsaitw.utils.exception.code;
+package com.iwsaitw.base.domain.exception.code;
 
-import com.iwsaitw.utils.exception.constant.BaseExceptionPrefix;
+import com.iwsaitw.base.domain.exception.constant.BaseExceptionPrefix;
 
 public enum GeneralExceptionCode implements BaseExceptionCode {
     II001(BaseExceptionPrefix.FAIL, "should be positive number"),

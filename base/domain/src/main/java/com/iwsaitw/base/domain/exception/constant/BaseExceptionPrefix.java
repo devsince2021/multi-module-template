@@ -1,4 +1,4 @@
-package com.iwsaitw.utils.exception.constant;
+package com.iwsaitw.base.domain.exception.constant;
 
 public enum BaseExceptionPrefix {
     FAIL("F400"),

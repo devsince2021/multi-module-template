@@ -1,14 +1,14 @@
-package com.iwsaitw.utils.exception.code;
+package com.iwsaitw.base.domain.exception.code;
 
-import com.iwsaitw.utils.exception.constant.BaseExceptionPrefix;
+import com.iwsaitw.base.domain.exception.constant.BaseExceptionPrefix;
 
-public enum ArgumentExceptionCode implements BaseExceptionCode {
-    WA001(BaseExceptionPrefix.FAIL, "must not be blank");
+public enum InternalServerErrorCode implements BaseExceptionCode {
+    SE001(BaseExceptionPrefix.ERROR, "Unexpected server error occurs");
 
     private final BaseExceptionPrefix prefix;
     private final String message;
 
-    ArgumentExceptionCode(BaseExceptionPrefix prefix, String message) {
+    InternalServerErrorCode(BaseExceptionPrefix prefix, String message) {
         this.prefix = prefix;
         this.message = message;
     }

@@ -1,7 +1,7 @@
-package com.iwsaitw.utils.domain.base;
+package com.iwsaitw.base.domain.domain.base;
 
-import com.iwsaitw.utils.exception.BaseException;
-import com.iwsaitw.utils.exception.code.GeneralExceptionCode;
+import com.iwsaitw.base.domain.exception.BaseException;
+import com.iwsaitw.base.domain.exception.code.GeneralExceptionCode;
 
 import java.util.Objects;
 

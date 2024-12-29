@@ -1,4 +1,4 @@
-package com.iwsaitw.utils.exception.code;
+package com.iwsaitw.base.domain.exception.code;
 
 public interface BaseExceptionCode {
     String getCode();

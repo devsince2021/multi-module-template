@@ -1,7 +1,7 @@
-package com.iwsaitw.utils.exception;
+package com.iwsaitw.base.domain.exception;
 
-import com.iwsaitw.utils.exception.code.BaseExceptionCode;
-import exception.BaseExceptionTestFixtures;
+import com.iwsaitw.base.domain.exception.code.BaseExceptionCode;
+import com.iwsaitw.base.domain.exception.fixture.BaseExceptionTestFixtures;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -1,6 +1,6 @@
-package com.iwsaitw.utils.exception;
+package com.iwsaitw.base.domain.exception;
 
-import com.iwsaitw.utils.exception.code.BaseExceptionCode;
+import com.iwsaitw.base.domain.exception.code.BaseExceptionCode;
 
 public class BaseException extends RuntimeException {
     private final BaseExceptionCode code;

@@ -1,7 +1,7 @@
-package exception;
+package com.iwsaitw.base.domain.exception.fixture;
 
-import com.iwsaitw.utils.exception.code.BaseExceptionCode;
-import com.iwsaitw.utils.exception.constant.BaseExceptionPrefix;
+import com.iwsaitw.base.domain.exception.code.BaseExceptionCode;
+import com.iwsaitw.base.domain.exception.constant.BaseExceptionPrefix;
 
 public class BaseExceptionTestFixtures {
     public static BaseExceptionCode createFailCode() {

@@ -1,6 +1,7 @@
-package com.iwsaitw.utils.domain.base;
+package com.iwsaitw.base.domain.domain.base;
 
-import com.iwsaitw.utils.exception.BaseException;
+import com.iwsaitw.base.domain.domain.base.BaseId;
+import com.iwsaitw.base.domain.exception.BaseException;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Constructor;
