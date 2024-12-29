@@ -1,4 +1,4 @@
-package com.iwsaitw.utils.persistence.base;
+package com.iwsaitw.base.persistence.base;
 
 import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedDate;

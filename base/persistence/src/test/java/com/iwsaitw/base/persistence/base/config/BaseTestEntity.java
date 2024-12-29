@@ -1,6 +1,6 @@
-package com.iwsaitw.utils.persistence.base.config;
+package com.iwsaitw.base.persistence.base.config;
 
-import com.iwsaitw.utils.persistence.base.BaseEntity;
+import com.iwsaitw.base.persistence.base.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 

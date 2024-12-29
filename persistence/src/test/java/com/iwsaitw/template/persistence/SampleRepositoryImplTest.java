@@ -2,7 +2,7 @@ package com.iwsaitw.template.persistence;
 
 import com.iwsaitw.template.persistence.config.DefaultPersistenceConfig;
 import com.iwsaitw.template.persistence.entity.SampleEntity;
-import com.iwsaitw.utils.persistence.export.testcontainer.BasePersistenceTest;
+import com.iwsaitw.base.persistence.export.testcontainer.BasePersistenceTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;

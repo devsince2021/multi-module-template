@@ -1,4 +1,4 @@
-package com.iwsaitw.utils.persistence.config;
+package com.iwsaitw.base.persistence.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;

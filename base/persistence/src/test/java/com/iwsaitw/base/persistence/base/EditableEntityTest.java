@@ -1,9 +1,9 @@
-package com.iwsaitw.utils.persistence.base;
+package com.iwsaitw.base.persistence.base;
 
-import com.iwsaitw.utils.persistence.export.testcontainer.BasePersistenceTest;
-import com.iwsaitw.utils.persistence.base.config.BaseEntityTestConfig;
-import com.iwsaitw.utils.persistence.base.config.EditableTestEntity;
-import com.iwsaitw.utils.persistence.base.config.EditableTestJpaRepository;
+import com.iwsaitw.base.persistence.export.testcontainer.BasePersistenceTest;
+import com.iwsaitw.base.persistence.base.config.BaseEntityTestConfig;
+import com.iwsaitw.base.persistence.base.config.EditableTestEntity;
+import com.iwsaitw.base.persistence.base.config.EditableTestJpaRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
