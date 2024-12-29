@@ -1,7 +1,7 @@
 package com.iwsaitw.template.api.health;
 
 import com.iwsaitw.template.api.constant.API;
-import com.iwsaitw.utils.web.response.Response;
+import com.iwsaitw.base.web.response.Response;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

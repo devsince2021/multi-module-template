@@ -1,6 +1,6 @@
 package com.iwsaitw.template.persistence.entity;
 
-import com.iwsaitw.utils.persistence.base.EditableEntity;
+import com.iwsaitw.base.persistence.base.EditableEntity;
 import jakarta.persistence.*;
 
 import java.util.Objects;

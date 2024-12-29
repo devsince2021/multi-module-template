@@ -5,6 +5,4 @@ include ('api')
 include ('application')
 include ('persistence')
 include ('core')
-include ('utils', 'utils:base-web', ':utils:base-domain', 'utils:base-persistence')
-
-
+include ('base', 'base:web', ':base:domain', 'base:persistence')
