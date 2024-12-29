@@ -1,8 +1,8 @@
 package com.iwsaitw.template.persistence.sample;
 
-import com.iwsaitw.template.persistence.base.BaseEntity;
-import com.iwsaitw.template.persistence.base.EditableEntity;
 import com.iwsaitw.template.persistence.entity.SampleEntity;
+import com.iwsaitw.base.persistence.base.BaseEntity;
+import com.iwsaitw.base.persistence.base.EditableEntity;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 

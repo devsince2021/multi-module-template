@@ -4,14 +4,11 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":application"))
-
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.postgresql:postgresql'
 
-    // [testContainer]
-    // https://testcontainers.com/modules/postgresql/
-    // https://java.testcontainers.org/modules/databases/postgres/
-    testImplementation 'org.testcontainers:postgresql:1.20.4'
-    testImplementation 'org.testcontainers:junit-jupiter:1.20.4'
+    implementation(project(":base:persistence"))
+    testImplementation(testFixtures(project(":base:persistence")))
+
+    implementation(project(":application"))
 }

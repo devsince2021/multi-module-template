@@ -2,8 +2,8 @@ package com.iwsaitw.template.application;
 
 import com.iwsaitw.template.core.domain.SampleDomain;
 import com.iwsaitw.template.core.domain.SampleService;
-import com.iwsaitw.utils.exception.BaseException;
-import com.iwsaitw.utils.exception.code.GeneralExceptionCode;
+import com.iwsaitw.base.domain.exception.BaseException;
+import com.iwsaitw.base.domain.exception.code.GeneralExceptionCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
