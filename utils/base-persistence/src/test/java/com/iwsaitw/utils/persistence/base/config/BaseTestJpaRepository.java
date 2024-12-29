@@ -1,4 +1,4 @@
-package com.iwsaitw.utils.persistence.fixture.base;
+package com.iwsaitw.utils.persistence.base.config;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
