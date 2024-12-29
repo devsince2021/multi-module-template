@@ -1,4 +1,4 @@
-package com.iwsaitw.utils.persistence.testcontainer;
+package com.iwsaitw.utils.persistence.export.testcontainer;
 
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;

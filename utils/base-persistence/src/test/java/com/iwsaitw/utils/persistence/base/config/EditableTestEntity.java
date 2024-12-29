@@ -1,4 +1,4 @@
-package com.iwsaitw.utils.persistence.fixture.base;
+package com.iwsaitw.utils.persistence.base.config;
 
 import com.iwsaitw.utils.persistence.base.EditableEntity;
 import jakarta.persistence.Entity;
