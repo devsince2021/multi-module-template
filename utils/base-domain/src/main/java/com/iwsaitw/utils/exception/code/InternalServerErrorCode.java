@@ -19,12 +19,7 @@ public enum InternalServerErrorCode implements BaseExceptionCode {
     }
 
     @Override
-    public BaseExceptionPrefix getPrefix() {
-        return this.prefix;
-    }
-
-    @Override
     public String getCode() {
-        return this.name();
+        return this.prefix.getCode() + "-" + this.name();
     }
 }

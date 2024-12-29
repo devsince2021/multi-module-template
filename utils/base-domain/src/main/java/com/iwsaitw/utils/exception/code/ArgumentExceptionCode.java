@@ -3,7 +3,7 @@ package com.iwsaitw.utils.exception.code;
 import com.iwsaitw.utils.exception.constant.BaseExceptionPrefix;
 
 public enum ArgumentExceptionCode implements BaseExceptionCode {
-    WA001(BaseExceptionPrefix.FAIL, "It has illegal argument");
+    WA001(BaseExceptionPrefix.FAIL, "must not be blank");
 
     private final BaseExceptionPrefix prefix;
     private final String message;
@@ -19,12 +19,7 @@ public enum ArgumentExceptionCode implements BaseExceptionCode {
     }
 
     @Override
-    public BaseExceptionPrefix getPrefix() {
-        return this.prefix;
-    }
-
-    @Override
     public String getCode() {
-        return this.name();
+        return this.prefix.getCode() + "-" + this.name();
     }
 }

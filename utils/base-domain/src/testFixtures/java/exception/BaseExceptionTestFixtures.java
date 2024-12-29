@@ -1,4 +1,4 @@
-package com.iwsaitw.utils.exception.fixture;
+package exception;
 
 import com.iwsaitw.utils.exception.code.BaseExceptionCode;
 import com.iwsaitw.utils.exception.constant.BaseExceptionPrefix;
@@ -20,19 +20,15 @@ public class BaseExceptionTestFixtures {
             this.message = message;
         }
 
-        @Override
-        public BaseExceptionPrefix getPrefix() {
-            return this.prefix;
-        }
-
-        @Override
-        public String getCode() {
-            return this.code;
-        }
 
         @Override
         public String getMessage() {
             return this.message;
+        }
+
+        @Override
+        public String getCode() {
+            return this.prefix.getCode() + "-" + this.code;
         }
     }
 

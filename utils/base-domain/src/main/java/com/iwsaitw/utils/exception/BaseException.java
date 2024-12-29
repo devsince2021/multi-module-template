@@ -11,7 +11,7 @@ public class BaseException extends RuntimeException {
     }
 
     public String getCode() {
-        return this.code.getPrefix().getCode() + "-" + this.code.getCode();
+        return this.code.getCode();
     }
 
     public String getMessage() {

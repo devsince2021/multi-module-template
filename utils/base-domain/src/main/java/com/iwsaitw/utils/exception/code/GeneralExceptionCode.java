@@ -3,7 +3,8 @@ package com.iwsaitw.utils.exception.code;
 import com.iwsaitw.utils.exception.constant.BaseExceptionPrefix;
 
 public enum GeneralExceptionCode implements BaseExceptionCode {
-    II001(BaseExceptionPrefix.FAIL, "should be positive number");
+    II001(BaseExceptionPrefix.FAIL, "should be positive number"),
+    II002(BaseExceptionPrefix.FAIL, "should not be null");
 
     private final BaseExceptionPrefix prefix;
     private final String message;
@@ -19,12 +20,7 @@ public enum GeneralExceptionCode implements BaseExceptionCode {
     }
 
     @Override
-    public BaseExceptionPrefix getPrefix() {
-        return this.prefix;
-    }
-
-    @Override
     public String getCode() {
-        return this.name();
+        return this.prefix.getCode() + "-" + this.name();
     }
 }

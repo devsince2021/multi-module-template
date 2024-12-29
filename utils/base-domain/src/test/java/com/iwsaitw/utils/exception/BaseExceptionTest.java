@@ -1,11 +1,11 @@
 package com.iwsaitw.utils.exception;
 
 import com.iwsaitw.utils.exception.code.BaseExceptionCode;
-import com.iwsaitw.utils.exception.fixture.BaseExceptionTestFixtures;
+import exception.BaseExceptionTestFixtures;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 
 public class BaseExceptionTest {
 
@@ -32,7 +32,7 @@ public class BaseExceptionTest {
         BaseExceptionCode code = BaseExceptionTestFixtures.createFailCode();
         BaseException ex = new BaseException(code);
 
-        assertTrue(ex.getCode().contains(code.getPrefix().getCode()));
-        assertTrue(ex.getCode().contains(code.getCode()));
+        assertEquals(ex.getCode(), code.getCode());
+        assertEquals(ex.getMessage(), code.getMessage());
     }
 }
